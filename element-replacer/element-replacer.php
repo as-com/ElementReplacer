@@ -1747,8 +1747,9 @@ function ereplacer_callback($buffer) {
   $ereplacer_outputhtml = str_get_html($buffer);
   // $ereplacer_outputhtml->find(".copyright", 0)->innertext = "Enchanced via magic!";
   foreach($ereplacer_outputhtml->find('.copyright') as $elm) {
-    $elem->innertext="Enhanced via magic!";
+    $elm->innertext="Enhanced via magic!";
   }
+
   return $ereplacer_outputhtml;
 }
 
