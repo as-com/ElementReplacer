@@ -47,25 +47,17 @@ function ereplacer_plugin_settings() {
 function ereplacer_display_settings() {
   $selectors = (get_option('ereplacer_selectors') != '') ? get_option('ereplacer_selectors') : '';
   $innertext = (get_option('ereplacer_innertext') != '') ? get_option('ereplacer_innertext') : '';
-
-    $html = '</pre>
-<div class="wrap"><form action="options.php" method="post" name="options">
-<div id="icon-plugins" class="icon32"><br></div>
-<h2>ElementReplacer Settings</h2>
-' . wp_nonce_field('update-options') . '
-
- <label>Selector</label><input type="text" name="ereplacer_selectors" value="' . $selectors . '" /><br>
- <label>Innertext</label><input type="text" name="ereplacer_innertext" value="' . $innertext . '" />
-
- <input type="hidden" name="action" value="update" />
-
- <input type="hidden" name="page_options" value="ereplacer_selectors,ereplacer_innertext" />
-
- <input type="submit" name="Submit" value="Update" /></form></div>
-<pre>
-';
-
-    echo $html;
+  
+  echo '<div class="wrap"><form action="options.php" method="post" name="options">';
+  echo '<div id="icon-plugins" class="icon32"><br></div>';
+  echo '<h2>ElementReplacer Settings</h2>';
+  echo wp_nonce_field('update-options');
+  echo '<label>Selector</label><input type="text" name="ereplacer_selectors" value="' . $selectors . '" /><br>';
+  echo '<label>Innertext</label><input type="text" name="ereplacer_innertext" value="' . $innertext . '" />';
+  
+  echo '<input type="hidden" name="action" value="update" />'
+  echo '<input type="hidden" name="page_options" value="ereplacer_selectors,ereplacer_innertext" />';
+  echo '<input type="submit" name="Submit" value="Update" /></form></div>';
 
 }
 
