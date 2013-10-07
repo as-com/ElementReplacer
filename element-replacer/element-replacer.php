@@ -55,7 +55,7 @@ function ereplacer_display_settings() {
   echo '<label>Selector</label><input type="text" name="ereplacer_selectors" value="' . $selectors . '" /><br>';
   echo '<label>Innertext</label><input type="text" name="ereplacer_innertext" value="' . $innertext . '" />';
   
-  echo '<input type="hidden" name="action" value="update" />'
+  echo '<input type="hidden" name="action" value="update" />';
   echo '<input type="hidden" name="page_options" value="ereplacer_selectors,ereplacer_innertext" />';
   echo '<input type="submit" name="Submit" value="Update" /></form></div>';
 
